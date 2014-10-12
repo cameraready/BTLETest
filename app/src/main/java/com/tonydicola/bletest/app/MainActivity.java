@@ -140,6 +140,7 @@ public class MainActivity extends Activity {
         super.onResume();
         // Scan for all BTLE devices.
         // The first one with the UART service will be chosen--see the code in the scanCallback.
+        messages.setText("");
         writeLine("Scanning for devices...");
         adapter.startLeScan(scanCallback);
     }
